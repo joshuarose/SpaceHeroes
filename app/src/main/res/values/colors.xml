@@ -3,4 +3,19 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#4CAF50</color>
+
+    <!-- NASA Reds -->
+    <color name="red_primary">#ee3a41</color>
+    <color name="red_medium">#f4888d</color>
+    <color name="red_light">#fdebec</color>
+
+    <!-- NASA Blues -->
+    <color name="blue_primary">#0166b3</color>
+    <color name="blue_medium">#80b2d9</color>
+    <color name="blue_light">#e6f0f7</color>
+
+    <!-- NASA Greys -->
+    <color name="grey_primary">#a1a1a5</color>
+    <color name="grey_medium">#d9d9db</color>
+    <color name="grey_light">#f5f5f6</color>
 </resources>

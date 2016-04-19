@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.josh.spaceheroes.MainActivity">
+    tools:context=".activity.MainActivity">
     <data class="MainBinding">
 
     </data>
@@ -10,21 +10,77 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true">
-        <android.support.design.widget.AppBarLayout
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/AppTheme.AppBarOverlay">
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context=".activity.MainActivity"
+            tools:showIn="@layout/activity_main">
 
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
+            <TextView
+                android:id="@+id/text_header"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                app:font="@{`nasa.ttf`}"
+                android:textSize="24sp"
+                android:textColor="@color/red_primary"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:text="Space Legends" />
 
-        </android.support.design.widget.AppBarLayout>
+            <Button
+                android:id="@+id/button_astronaut"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="50dp"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/text_header"
+                android:drawableLeft="@drawable/astronaut"
+                android:drawableTint="@android:color/white"
+                android:background="@color/blue_medium"
+                app:font="@{`nasa.ttf`}"
+                android:text="Astronauts"
+                android:textColor="@android:color/white"/>
 
-        <include layout="@layout/content_main" />
+            <Button
+                android:id="@+id/button_spacecraft"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/button_astronaut"
+                android:drawableLeft="@drawable/lunar_module"
+                android:background="@color/blue_medium"
+                app:font="@{`nasa.ttf`}"
+                android:text="Spacecraft"
+                android:textColor="@android:color/white"/>
+
+            <Button
+                android:id="@+id/button_message"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/button_spacecraft"
+                android:drawableLeft="@drawable/sat"
+                android:background="@color/blue_medium"
+                android:drawableTint="@android:color/white"
+                app:font="@{`nasa.ttf`}"
+                android:text="Message Mars"
+                android:textColor="@android:color/white"/>
+            
+            
+        </RelativeLayout>
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab"
@@ -34,6 +90,11 @@
             android:layout_margin="@dimen/fab_margin"
             android:src="@drawable/ic_rocket"
             android:tint="@android:color/white"/>
+
+        <ImageView
+            android:id="@+id/image_test"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 
     </android.support.design.widget.CoordinatorLayout>
 </layout>
